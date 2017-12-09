@@ -11,5 +11,13 @@ except OSError:
     print("Файл не найден! Файл должен называться: {}".format(filename))
     status = 'Файл не найден'
 
+for index, i in enumerate(data):
+	obj = {}
+	obj.update(
+		{'company':i.get('company'),
+		 'email':i.get('email'),
+		 'phone':i.get('phone'),
+		 'address':i.get('address')})
 
-pprint.pprint(data)
+	print('\nIndex', index)
+	pprint.pprint(obj)
